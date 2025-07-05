@@ -13,9 +13,9 @@ import {
   Image as ImageIcon
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
-import { MarkdownRenderer } from '@/app/firesearch/markdown-renderer'
 import { ScreenshotPreview } from '@/components/screenshot-preview'
 import { SearchResultsDisplay } from '@/components/search-results-display'
+import { MarkdownRenderer } from './markdown-renderer'
 
 export interface ThinkingEvent {
   type: 'start' | 'thinking' | 'tool_call' | 'tool_result' | 'response' | 'summary'

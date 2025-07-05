@@ -311,7 +311,7 @@ export function SearchResultsDisplay({
                 <div className="flex items-center gap-3 lg:gap-8">
                   {/* Firecrawl logo */}
                   <img 
-                    src="/firecrawl-logo-with-fire.png" 
+                    src="/kimmchi-logo.png" 
                     alt="Firecrawl" 
                     className="h-6 lg:h-8 w-auto flex-shrink-0"
                   />
