@@ -341,13 +341,13 @@ export function ThinkingChat({ onMessagesChange, hasFirecrawlKey = false, onApiK
               onFocus={() => setShowSuggestions(true)}
               onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
               placeholder="What do you want to explore today?"
-              className="w-full h-14 rounded-full border border-zinc-200 bg-white pl-5 pr-14 text-base text-zinc-900 dark:text-zinc-100 ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-zinc-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-zinc-800 dark:bg-zinc-950 dark:ring-offset-zinc-950 dark:placeholder:text-zinc-400 dark:focus-visible:ring-orange-400 shadow-sm"
+              className="w-full h-14 rounded-full border border-zinc-200 bg-white pl-5 pr-14 text-base text-zinc-900 dark:text-zinc-100 ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-zinc-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-zinc-800 dark:bg-zinc-950 dark:ring-offset-zinc-950 dark:placeholder:text-zinc-400 dark:focus-visible:ring-purple-400 shadow-sm"
               disabled={isSearching}
             />
             <button
               type="submit"
               disabled={isSearching || !input.trim()}
-              className="absolute right-2 top-2 h-10 w-10 bg-orange-500 hover:bg-orange-600 text-white rounded-full disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200 flex items-center justify-center"
+              className="absolute right-2 top-2 h-10 w-10 bg-purple-500 hover:bg-purple-600 text-white rounded-full disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200 flex items-center justify-center"
             >
               {isSearching ? (
                 <Loader2 className="h-4 w-4 animate-spin" />
@@ -417,7 +417,7 @@ export function ThinkingChat({ onMessagesChange, hasFirecrawlKey = false, onApiK
               )}
             >
               {message.role === 'user' ? (
-                <div className="max-w-[85%] lg:max-w-[80%] bg-orange-500 text-white px-3 lg:px-4 py-2 lg:py-3 rounded-lg shadow-sm text-sm">
+                <div className="max-w-[85%] lg:max-w-[80%] bg-purple-500 text-white px-3 lg:px-4 py-2 lg:py-3 rounded-lg shadow-sm text-sm">
                   {message.content}
                 </div>
               ) : (
@@ -452,7 +452,7 @@ export function ThinkingChat({ onMessagesChange, hasFirecrawlKey = false, onApiK
                           return (
                             <div key={idx} className={`px-3 lg:px-4 py-2 rounded-lg border ${colorClass} max-w-[90%] lg:max-w-[80%]`}>
                               <div className="flex items-start gap-2">
-                                <div className={`w-1.5 h-1.5 rounded-full ${isWebSearch ? 'bg-purple-500' : isDeepScrape ? 'bg-orange-500' : 'bg-gray-500'} mt-1.5 flex-shrink-0`} />
+                                <div className={`w-1.5 h-1.5 rounded-full ${isWebSearch ? 'bg-purple-500' : isDeepScrape ? 'bg-purple-500' : 'bg-gray-500'} mt-1.5 flex-shrink-0`} />
                                 <div className="flex-1">
                                   <div className="text-sm">
                                     <span className={`font-medium ${textColorClass}`}>
@@ -511,7 +511,7 @@ export function ThinkingChat({ onMessagesChange, hasFirecrawlKey = false, onApiK
                   ) : isSearching && message.searchData?.status === 'searching' ? (
                     <div className="bg-gray-100 dark:bg-gray-800 px-4 py-3 rounded-lg animate-fade-in" style={{ animationDelay: '200ms', opacity: 0 }}>
                       <div className="flex items-center gap-2">
-                        <Loader2 className="h-4 w-4 animate-spin text-orange-500" />
+                        <Loader2 className="h-4 w-4 animate-spin text-purple-500" />
                         <span className="text-sm text-gray-600 dark:text-gray-400">
                           Researching...
                         </span>
@@ -550,13 +550,13 @@ export function ThinkingChat({ onMessagesChange, hasFirecrawlKey = false, onApiK
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Enter query..."
-                className="w-full h-12 rounded-full border border-zinc-200 bg-white pl-5 pr-14 text-base text-zinc-900 dark:text-zinc-100 ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-zinc-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-zinc-800 dark:bg-zinc-950 dark:ring-offset-zinc-950 dark:placeholder:text-zinc-400 dark:focus-visible:ring-orange-400 shadow-sm"
+                className="w-full h-12 rounded-full border border-zinc-200 bg-white pl-5 pr-14 text-base text-zinc-900 dark:text-zinc-100 ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-zinc-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-zinc-800 dark:bg-zinc-950 dark:ring-offset-zinc-950 dark:placeholder:text-zinc-400 dark:focus-visible:ring-purple-400 shadow-sm"
                 disabled={isSearching}
               />
               <button
                 type="submit"
                 disabled={isSearching || !input.trim()}
-                className="absolute right-2 top-2 h-8 w-8 bg-orange-500 hover:bg-orange-600 text-white rounded-full disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200 flex items-center justify-center"
+                className="absolute right-2 top-2 h-8 w-8 bg-purple-500 hover:bg-purple-600 text-white rounded-full disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200 flex items-center justify-center"
               >
                 {isSearching ? (
                   <Loader2 className="h-4 w-4 animate-spin" />

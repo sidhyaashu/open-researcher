@@ -92,7 +92,16 @@ export default function OpenResearcherContent() {
         <div className={`px-4 sm:px-6 lg:px-8 transition-all duration-700 ease-in-out ${hasMessages ? 'max-w-[1400px]' : 'max-w-4xl'
           } mx-auto`}>
           <div className="flex items-center justify-between">
-
+            <Link href="https://kimmchi.com" target="_blank" rel="noopener noreferrer">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/kimmchi-logo.png"
+                alt="Firecrawl Logo"
+                width={113}
+                height={24}
+                className="w-[113px] h-auto"
+              />
+            </Link>
           </div>
         </div>
       </header>
@@ -131,7 +140,7 @@ export default function OpenResearcherContent() {
             Powered by{' '}
             <Link
               href="https://kimmchi.com"
-              className="text-orange-600 hover:text-orange-700 dark:text-orange-400 dark:hover:text-orange-300 font-medium"
+              className="text-purple-600 hover:text-orange-700 dark:text-orange-400 dark:hover:text-orange-300 font-medium"
               target="_blank"
               rel="noopener noreferrer"
             >
